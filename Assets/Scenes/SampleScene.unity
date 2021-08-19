@@ -391,7 +391,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 121337295}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1515243306}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: TicTacToeButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &121337295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,7 +523,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 137975327}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1515243306}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: TicTacToeButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &137975327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,7 +856,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 545115380}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1515243306}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: TicTacToeButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &545115380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,7 +988,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 597335474}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1515243306}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: TicTacToeButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &597335474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,7 +1195,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 822811997}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1515243306}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: TicTacToeButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &822811997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1705,7 +1765,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1287555636}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1515243306}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: TicTacToeButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1287555636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1825,7 +1897,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1407016943}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1515243306}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: TicTacToeButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1407016943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1968,7 +2052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b513acf99cb69d498f229b63ff56996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _whoTurn: 0
+  _whoseTurn: 0
   _turnCounter: 0
   turnIcons:
   - {fileID: 29216705}
@@ -2213,7 +2297,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1778004029}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1515243306}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: TicTacToeButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1778004029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2333,7 +2429,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1858746060}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1515243306}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: TicTacToeButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1858746060
 MonoBehaviour:
   m_ObjectHideFlags: 0

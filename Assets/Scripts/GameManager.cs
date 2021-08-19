@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     #region Variables   
     // X=1 AND O=0 
-    [SerializeField] protected int _whoTurn;  
+    [SerializeField] protected int _whoseTurn;  
     // Counts The number of Turn played
     [SerializeField] protected int _turnCounter; 
     // Displays whos turn it is
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     #region Methods  
     void GameSetup()
     {
-        _whoTurn = 0;
+        _whoseTurn = 0;
         _turnCounter = 0;
         turnIcons[0].SetActive(true);
         turnIcons[1].SetActive(false); 
@@ -41,6 +41,24 @@ public class GameManager : MonoBehaviour
         {
             ticTacToeSpaces[i].interactable = true;
             ticTacToeSpaces[i].GetComponent<Image>().sprite = null;
+        }
+    } 
+    public void TicTacToeButton(int WhichNumber)
+    {
+        ticTacToeSpaces[WhichNumber].image.sprite = playerIcons[_whoseTurn];
+        ticTacToeSpaces[WhichNumber].interactable = false;
+
+        if (_whoseTurn == 0)
+        {
+            _whoseTurn = 1;
+            turnIcons[0].SetActive(false);
+            turnIcons[1].SetActive(true);
+        }
+        else
+        {
+            _whoseTurn = 0;
+            turnIcons[0].SetActive(true);
+            turnIcons[1].SetActive(false);
         }
     }
     #endregion
