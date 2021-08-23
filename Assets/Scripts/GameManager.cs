@@ -25,8 +25,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject[] winningLine; 
     // Helping make game over area be more clear
     [SerializeField] GameObject winnerPanel;
-    public Button xPlayerBtn;
-    public Button oPlayerBtn;
 
     #endregion
     #region Unity
@@ -93,25 +91,13 @@ public class GameManager : MonoBehaviour
         int s4 = markedSpaces[0] + markedSpaces[3] + markedSpaces[6];
         int s5 = markedSpaces[1] + markedSpaces[4] + markedSpaces[7];
         int s6 = markedSpaces[2] + markedSpaces[5] + markedSpaces[8];
-        int s7 = markedSpaces[0] + markedSpaces[4] + markedSpaces[8];// \
-        int s8 = markedSpaces[2] + markedSpaces[4] + markedSpaces[6];// |
+        int s7 = markedSpaces[0] + markedSpaces[4] + markedSpaces[8];
+        int s8 = markedSpaces[2] + markedSpaces[4] + markedSpaces[6];
 
         var solutions = new int[] { s1, s2, s3, s4, s5, s6, s7, s8 }; 
 
         for (int i = 0; i < solutions.Length; i++)
         {
-            // Circle win
-            /* if (solutions[i] == 3 * Convert.ToInt32(whoseTurn == 1))
-             {
-                 Debug.Log("Player " + whoseTurn + " won!");
-                 return;
-             }
-             // Cross win
-             if (solutions[i] == 3 * Convert.ToInt32(whoseTurn == 0))
-             {
-                 Debug.Log("Player " + whoseTurn + " won!");
-                 return;
-             }*/
             if (solutions[i] == 3*(whoseTurn + 1))
             {
                 WinnerDisplay(i);
@@ -132,7 +118,8 @@ public class GameManager : MonoBehaviour
         {
             winnerText.text = "Player 0 Wins !";
         }
-        winningLine[indexIn].SetActive(true);  
+        winningLine[indexIn].SetActive(true);   
+       
     } 
     public void Rematch()
     {

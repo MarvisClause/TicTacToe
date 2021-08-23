@@ -9,9 +9,6 @@ public class Canvas : MonoBehaviour
     [SerializeField] protected GameObject _chooseMenu;
     [SerializeField] protected GameObject _gameArea;
     [SerializeField] protected GameObject _hud;
-    //[SerializeField] protected GameObject _orderOfMoves;
-    //[SerializeField] protected GameObject _winningLine;
-    //[SerializeField] protected GameObject _winnerPanel; 
     [SerializeField] protected GameObject _gameOver;
     #endregion
     #region Unity
@@ -41,10 +38,7 @@ public class Canvas : MonoBehaviour
        _gameArea.SetActive(false); 
        _chooseMenu.SetActive(true);
        _hud.SetActive(false);
-       _gameOver.SetActive(true);
+       _gameOver.SetActive(false);
     } 
-
-     
-    
     #endregion
 }
