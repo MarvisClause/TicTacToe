@@ -29,8 +29,13 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject startInfo;
     
-    private int moveCount; 
+    private int moveCount;  
+
     public string playerSide;
+    private string aiSide;
+    public bool playerMove;
+    public float delay;
+    private int value;
     
 
     public void Awake()
@@ -39,7 +44,26 @@ public class GameManager : MonoBehaviour
         gameOverPanel.SetActive(false);
         moveCount = 0;
         restartButton.SetActive(false);
+        playerMove = true;
     }
+    private void Update()
+    {
+        if (playerMove == false)
+        {
+            delay += delay * Time.deltaTime; 
+            if (delay >= 100)
+            { 
+                value = Random.Range(0, 8);
+                if (buttonList[value].GetComponentInParent<Button>().interactable == true)
+                {
+                    buttonList[value].text = GetAISide();
+                    buttonList[value].GetComponentInParent<Button>().interactable = false;
+                    EndTurn();
+                }
+            }
+        }
+    } 
+
     void SetGameManagerReferenceOnButtons()
     {
         for(int i = 0; i < buttonList.Length; i++)
@@ -54,10 +78,12 @@ public class GameManager : MonoBehaviour
         playerSide = startingSide;
         if (playerSide == "X")
         {
+            aiSide = "0";
             SetPlayerColors(playerX, playerO);
         }
         else
         {
+            aiSide = "X";
             SetPlayerColors(playerO, playerX);
         }
         StartGame();
@@ -73,10 +99,17 @@ public class GameManager : MonoBehaviour
     public string GetPlayerSide()
     {
         return playerSide;
-    } 
+    }  
+     
+    public string GetAISide()
+    {
+        return aiSide;
+    }
+
     public void EndTurn()
     {
-        moveCount++;
+        moveCount++; 
+        //player side
         if (buttonList[0].text == playerSide && buttonList[1].text == playerSide && buttonList[2].text == playerSide)
         {
             GameOver(playerSide);
@@ -108,6 +141,39 @@ public class GameManager : MonoBehaviour
         else if(buttonList[2].text == playerSide && buttonList[4].text == playerSide && buttonList[6].text == playerSide)
         {
             GameOver(playerSide);
+        }
+        // ai side
+        else if (buttonList[0].text == playerSide && buttonList[1].text == playerSide && buttonList[2].text == playerSide)
+        {
+            GameOver(aiSide);
+        }
+        else if (buttonList[3].text == playerSide && buttonList[4].text == playerSide && buttonList[5].text == playerSide)
+        {
+            GameOver(aiSide);
+        }
+        else if (buttonList[6].text == playerSide && buttonList[7].text == playerSide && buttonList[8].text == playerSide)
+        {
+            GameOver(aiSide);
+        }
+        else if (buttonList[0].text == playerSide && buttonList[3].text == playerSide && buttonList[6].text == playerSide)
+        {
+            GameOver(aiSide);
+        }
+        else if (buttonList[1].text == playerSide && buttonList[4].text == playerSide && buttonList[7].text == playerSide)
+        {
+            GameOver(aiSide);
+        }
+        else if (buttonList[2].text == playerSide && buttonList[5].text == playerSide && buttonList[8].text == playerSide)
+        {
+            GameOver(aiSide);
+        }
+        else if (buttonList[0].text == playerSide && buttonList[4].text == playerSide && buttonList[8].text == playerSide)
+        {
+            GameOver(aiSide);
+        }
+        else if (buttonList[2].text == playerSide && buttonList[4].text == playerSide && buttonList[6].text == playerSide)
+        {
+            GameOver(aiSide);
         }
 
         else if (moveCount >= 9)
@@ -146,8 +212,10 @@ public class GameManager : MonoBehaviour
     } 
     void ChangeSides()
     {
-        playerSide = (playerSide == "X") ? "0" : "X";
-        if (playerSide == "X")
+        //playerSide = (playerSide == "X") ? "0" : "X";
+        playerMove = (playerMove == true) ? false : true;
+        //if (playerSide == "X") 
+        if(playerMove==true)
         {
             SetPlayerColors(playerX, playerO);
         }
@@ -169,6 +237,8 @@ public class GameManager : MonoBehaviour
         SetPlayerButtons(true);
         SetPlayerColorsInactive();
         startInfo.SetActive(true);
+        playerMove = true;
+        delay = 10; 
 
         for (int i = 0; i < buttonList.Length; i++)
         {

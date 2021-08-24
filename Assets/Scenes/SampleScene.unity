@@ -2340,6 +2340,8 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1359825260}
   startInfo: {fileID: 863959828}
   playerSide: X
+  playerMove: 0
+  delay: 10
 --- !u!4 &1508048704
 Transform:
   m_ObjectHideFlags: 0
