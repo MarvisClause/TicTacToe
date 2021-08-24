@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
- 
+
+#region Player Class
 [System.Serializable]
 public class Player
 {
@@ -16,9 +17,12 @@ public class PlayerColor
     public Color penelColor;
     public Color textColor;
 }
+#endregion 
 
+#region Game Manager
 public class GameManager : MonoBehaviour
-{    
+{
+    #region Variables
     public Text gameOverText;
     public Text[] buttonList;
     public Player playerX;
@@ -36,8 +40,9 @@ public class GameManager : MonoBehaviour
     public bool playerMove;
     public float delay;
     private int value;
-    
+    #endregion
 
+    #region Unity
     public void Awake()
     {
         SetGameManagerReferenceOnButtons();
@@ -62,8 +67,10 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-    } 
+    }
+    #endregion
 
+    #region Methods
     void SetGameManagerReferenceOnButtons()
     {
         for(int i = 0; i < buttonList.Length; i++)
@@ -78,7 +85,7 @@ public class GameManager : MonoBehaviour
         playerSide = startingSide;
         if (playerSide == "X")
         {
-            aiSide = "0";
+            aiSide = "O";
             SetPlayerColors(playerX, playerO);
         }
         else
@@ -143,35 +150,35 @@ public class GameManager : MonoBehaviour
             GameOver(playerSide);
         }
         // ai side
-        else if (buttonList[0].text == playerSide && buttonList[1].text == playerSide && buttonList[2].text == playerSide)
+        else if (buttonList[0].text == aiSide && buttonList[1].text == aiSide && buttonList[2].text == aiSide)
         {
             GameOver(aiSide);
         }
-        else if (buttonList[3].text == playerSide && buttonList[4].text == playerSide && buttonList[5].text == playerSide)
+        else if (buttonList[3].text == aiSide && buttonList[4].text == aiSide && buttonList[5].text == aiSide)
         {
             GameOver(aiSide);
         }
-        else if (buttonList[6].text == playerSide && buttonList[7].text == playerSide && buttonList[8].text == playerSide)
+        else if (buttonList[6].text == aiSide && buttonList[7].text == aiSide && buttonList[8].text == aiSide)
         {
             GameOver(aiSide);
         }
-        else if (buttonList[0].text == playerSide && buttonList[3].text == playerSide && buttonList[6].text == playerSide)
+        else if (buttonList[0].text == aiSide && buttonList[3].text == aiSide && buttonList[6].text == aiSide)
         {
             GameOver(aiSide);
         }
-        else if (buttonList[1].text == playerSide && buttonList[4].text == playerSide && buttonList[7].text == playerSide)
+        else if (buttonList[1].text == aiSide && buttonList[4].text == aiSide && buttonList[7].text == aiSide)
         {
             GameOver(aiSide);
         }
-        else if (buttonList[2].text == playerSide && buttonList[5].text == playerSide && buttonList[8].text == playerSide)
+        else if (buttonList[2].text == aiSide && buttonList[5].text == aiSide && buttonList[8].text == aiSide)
         {
             GameOver(aiSide);
         }
-        else if (buttonList[0].text == playerSide && buttonList[4].text == playerSide && buttonList[8].text == playerSide)
+        else if (buttonList[0].text == aiSide && buttonList[4].text == aiSide && buttonList[8].text == aiSide)
         {
             GameOver(aiSide);
         }
-        else if (buttonList[2].text == playerSide && buttonList[4].text == playerSide && buttonList[6].text == playerSide)
+        else if (buttonList[2].text == aiSide && buttonList[4].text == aiSide && buttonList[6].text == aiSide)
         {
             GameOver(aiSide);
         }
@@ -268,4 +275,6 @@ public class GameManager : MonoBehaviour
         playerO.panel.color = inactivePlayerColor.penelColor;
         playerX.text.color = inactivePlayerColor.textColor;
     }
+    #endregion
 }
+#endregion

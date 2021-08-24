@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class GridSpace : MonoBehaviour
 {
+    #region Variables
     public Button button;
     public Text buttonText;
 
     private GameManager gameManager;
-
+    #endregion 
+    #region Methods 
     public void SetSpace()
     {
         if (gameManager.playerMove == true)
@@ -24,4 +26,5 @@ public class GridSpace : MonoBehaviour
     {
         gameManager = manager;
     }
+    #endregion
 }
