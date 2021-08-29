@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Canvas : MonoBehaviour
+public class InterfaceManager : MonoBehaviour
 {
     #region Veriables 
     [SerializeField] protected GameObject _MainMenu;

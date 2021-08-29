@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc598f10000f6247a8b5a38fa2d1604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverText: {fileID: 0}
-  buttonList:
+  _gameOverText: {fileID: 0}
+  _buttonList:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -54,23 +54,23 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  playerX:
+  _playerX:
     panel: {fileID: 0}
     text: {fileID: 0}
     button: {fileID: 0}
-  playerO:
+  _playerO:
     panel: {fileID: 0}
     text: {fileID: 0}
     button: {fileID: 0}
-  activePlayerColor:
-    penelColor: {r: 1, g: 1, b: 1, a: 1}
-    textColor: {r: 0, g: 0, b: 0, a: 1}
-  inactivePlayerColor:
+  _activePlayerColor:
     penelColor: {r: 0, g: 0, b: 0, a: 1}
     textColor: {r: 1, g: 1, b: 1, a: 1}
-  restartButton: {fileID: 0}
-  gameOverPanel: {fileID: 0}
-  startInfo: {fileID: 0}
-  playerSide: X
-  playerMove: 0
-  delay: 100
+  _inactivePlayerColor:
+    penelColor: {r: 1, g: 1, b: 1, a: 1}
+    textColor: {r: 0, g: 0, b: 0, a: 1}
+  _restartButton: {fileID: 0}
+  _gameOverPanel: {fileID: 0}
+  _startInfo: {fileID: 0}
+  _playerSide: 
+  _playerMove: 1
+  _delay: 10
